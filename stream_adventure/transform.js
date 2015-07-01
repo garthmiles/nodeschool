@@ -4,7 +4,9 @@ var stream = through(write, end)
 
 // transform functions for buffers
 function write(buffer, encoding, next) {
-	// to be replaced with stuff
+	// produce output data and proceed to next chunk
+	this.push(buffer + '\n')
+	next()
 }
 
 function end(done) {
