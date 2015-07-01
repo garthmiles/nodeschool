@@ -1,8 +1,8 @@
 // load & set req'd modules
-var through = require('through2') 
+var thru = require('through2') 
 
 // transform functions for buffers
-var tStream = through(function (buffer, encoding, next) {
+var tStream = thru(function (bffr, enc, next) {
 	// produce output data and proceed to next chunk
 	this.push(buffer.toString())
 	next()
