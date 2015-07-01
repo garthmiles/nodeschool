@@ -5,6 +5,6 @@ var fs = require('fs')
 var host = process.stdin
 
 // write to host
-host.pipe()
+fs.createReadStream(host).pipe(process.stdout)
 
 
